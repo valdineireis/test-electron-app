@@ -1,0 +1,26 @@
+.cor-verde { color:#34c84a !important }
+.cor-amarelo { color:#fdbc40 !important }
+.cor-azul { color:#57acf5 !important }
+.cor-vermelho { color:#fc605b !important }
+
+button, button span, .btn { cursor: pointer; }
+
+.path-folder {
+    color: #555;
+    margin: 0 5px;
+}
+
+/** INICIO - FORMATAÇÃO DA TABELA*/
+.thead-row td {
+    font-weight: bold;
+}
+.tbody-row td {
+    cursor: pointer;
+}
+.tbody-row:hover {
+    background-color: #eaeaea;
+}
+.tbody-row:active {
+    color: #555;
+}
+/** FIM - FORMATAÇÃO DA TABELA*/

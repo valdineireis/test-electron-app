@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="./photon/css/photon.min.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <title>Aplicação</title>
+  </head>
+  <body>
+    <div class="window">
+      <header class="toolbar toolbar-header">
+        <h1 class="title">Teste - DEV</h1>
+
+        <div class="toolbar-actions">
+
+          <button id="btn-filter" class="btn btn-default">
+            <span class="icon icon-folder icon-text"></span>
+            Selecionar pasta ...
+          </button>
+
+          <div class="btn-group pull-right">
+              <button id="btn-window-minimizar" class="btn btn-default">
+                <span class="icon icon-minus"></span>
+              </button>
+              <button id="btn-window-maximizar" class="btn btn-default">
+                <span class="icon icon-popup"></span>
+              </button>
+              <button id="btn-window-fechar" class="btn btn-default">
+                <span class="icon icon-cancel"></span>
+              </button>
+            </div>
+        </div>
+      </header>
+
+      <div class="window-content">
+        <div class="pane-group">
+          <div id="tbl-area" class="pane"></div>
+        </div>
+      </div>
+
+      <footer class="toolbar toolbar-footer">
+        <span id="path-folder" class="path-folder"></span>
+      </footer>
+    </div>
+
+    <script src="./controller.js"></script>
+
+    <!-- You can also require other files to run in this process -->
+    <!--<script src="./renderer.js"></script>-->
+    <!--<script src="./asset/js/script.js"></script>-->
+  </body>
+</html>

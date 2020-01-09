@@ -1,0 +1,1 @@
+//document.getElementsByClassName('btn-group')[0].style.display = 'none';

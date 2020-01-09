@@ -1,0 +1,28 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "electron": "^7.1.7",
+    "electron-reload": "^1.5.0"
+  },
+  "dependencies": {
+    "mousetrap": "^1.6.3",
+    "xml-js": "^1.6.11"
+  }
+}
