@@ -10,7 +10,8 @@ class Table {
 
     /** 
      * Configura a estrutura da tabela.
-     * @param {id} id - atributo ID do elemento.
+     * @param {id} id - Atributo ID do elemento.
+     * @param {cssclass} cssclass - Classes CSS para formatação da tabela.
      * @param {thead[]} thead - Lista de objetos que compõe o cabeçalho da tabela.
      * @param {appendIn} appendIn - Elemento HTML que receberá a tabela.
      * 
@@ -24,9 +25,10 @@ class Table {
      *     appendIn: document.getElementById('tbl-area')
      * });
      */
-    constructor({ id = '', thead = [], appendIn }) {
+    constructor({ id = '', cssclass = '', thead = [], appendIn }) {
         this.table = document.createElement("table");
         if (id)       this.setId(id);
+        if (cssclass) this.setClass(cssclass);
         if (thead)    this.setTHead(thead);
         if (appendIn) this.appendIn(appendIn);
     }
