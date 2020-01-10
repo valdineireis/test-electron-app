@@ -74,7 +74,7 @@ btnFilter.addEventListener('click', (event) => {
                     });
                 } catch (error) {
                     console.info('file', file);
-                    console.error(error);
+                    console.warn(error);
                 }
             });
 

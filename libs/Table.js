@@ -71,7 +71,7 @@ class Table {
 
         this.thead = thead;
 
-        thead.forEach(col => {
+        this.thead.forEach(col => {
             let cell = headrow.insertCell();
             cell.innerHTML = col.label;
         });
@@ -106,7 +106,7 @@ class Table {
         tbody.forEach(dado => {
             // mapea os campos
             let fields = this.thead.map(t => { return t.field; });
-            // converte o objeto em array
+            // converte o objeto em um array
             let obj = Object.entries(dado);
 
             let bodyrow = body.insertRow();
@@ -122,9 +122,7 @@ class Table {
             fields.forEach(field => {
                 let cell = bodyrow.insertCell();
                 // busca o campo no objeto com base na coluna da tabela
-                let campo = obj.find(o => {
-                    return o[0] == field;
-                });
+                let campo = obj.find(o => o[0] == field );
 
                 if (campo) cell.innerHTML = campo[1];
                 else cell.innerHTML = '';
