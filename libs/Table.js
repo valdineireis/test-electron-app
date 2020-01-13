@@ -105,7 +105,7 @@ class Table {
 
         tbody.forEach(dado => {
             // mapea os campos
-            let fields = this.thead.map(t => { return t.field; });
+            let fields = this.thead.map(t => t.field);
             // converte o objeto em um array
             let obj = Object.entries(dado);
 
@@ -114,18 +114,15 @@ class Table {
 
             // função de callback
             if (event && callback) {
-                bodyrow.addEventListener(event, () => {
-                    callback(dado);
-                });
+                bodyrow.addEventListener(event, () => callback(dado));
             }
 
             fields.forEach(field => {
-                let cell = bodyrow.insertCell();
                 // busca o campo no objeto com base na coluna da tabela
-                let campo = obj.find(o => o[0] == field );
+                let campo = obj.find(o => o[0] == field);
 
-                if (campo) cell.innerHTML = campo[1];
-                else cell.innerHTML = '';
+                let cell = bodyrow.insertCell();
+                cell.innerHTML = campo ? campo[1] : '';
             });
         });
 
