@@ -113,7 +113,7 @@ class Table {
             bodyrow.setAttribute('class', 'tbody-row');
 
             // função de callback
-            if (event && callback) {
+            if (event && typeof callback === 'function') {
                 bodyrow.addEventListener(event, () => callback(dado));
             }
 
